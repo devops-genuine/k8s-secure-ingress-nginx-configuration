@@ -1,5 +1,7 @@
 #! /bin/bash
 
+kubectl create ns ingress-nginx
+
 helm install -f public-value.yaml --name ingress-public stable/nginx-ingress --version 1.4.0 --namespace ingress-nginx \
   --set controller.ingressClass=public \
   --set controller.daemonset.useHostPort=\"false\" \

@@ -4,7 +4,7 @@ metadata:
   name: #APPNAME#
   namespace: #NAMESPACE#
   annotations:
-    kubernetes.io/ingress.class: #INGRESS#
+    kubernetes.io/ingress.class: public
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
     nginx.ingress.kubernetes.io/configuration-snippet: |
       more_set_headers "Strict-Transport-Security: max-age=31536000 ; includeSubDomains";
